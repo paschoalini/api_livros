@@ -17,7 +17,7 @@ public class Livro {
     @Id
     private String ISBN;
     private String titulo;
-    private String Tema;
+    private String tema;
     private Boolean jaLeu;
 
     @OneToOne
