@@ -1,0 +1,27 @@
+insert into pessoa (id, nome, negativado) values (1, 'Pessoa ok', false);
+insert into pessoa (id, nome, negativado) values (2, 'Pessoa negativada', true);
+
+insert into livro (isbn, titulo, tema, ja_leu, emprestado_para_id) values ('01', 'Torto arado', 'Ficção', true, 1);
+insert into livro (isbn, titulo, tema, ja_leu, emprestado_para_id) values ('02', 'Tudo que já nadei', 'Ficção', true, null);
+insert into livro (isbn, titulo, tema, ja_leu, emprestado_para_id) values ('03', 'A garoa do lago', 'Ficção', true, null);
+insert into livro (isbn, titulo, tema, ja_leu, emprestado_para_id) values ('04', 'O duque e eu', 'Ficção', true, null);
+insert into livro (isbn, titulo, tema, ja_leu, emprestado_para_id) values ('05', 'Gotas para os olhos da fé', 'Não ficção', true, 2);
+insert into livro (isbn, titulo, tema, ja_leu, emprestado_para_id) values ('06', 'Mulheres que correm com os lobos', 'Não ficção', true, null);
+insert into livro (isbn, titulo, tema, ja_leu, emprestado_para_id) values ('07', 'Mindset', 'Não ficção', true, null);
+insert into livro (isbn, titulo, tema, ja_leu, emprestado_para_id) values ('08', 'Box - O essencial da psicologia', 'Não ficção', true, null);
+insert into livro (isbn, titulo, tema, ja_leu, emprestado_para_id) values ('09', 'Minha história', 'Não ficção', true, null);
+insert into livro (isbn, titulo, tema, ja_leu, emprestado_para_id) values ('10', 'Faça o amor ser fácil', 'Autoajuda', true, 1);
+insert into livro (isbn, titulo, tema, ja_leu, emprestado_para_id) values ('11', 'Mais esperto que o diabo', 'Autoajuda', true, null);
+insert into livro (isbn, titulo, tema, ja_leu, emprestado_para_id) values ('12', 'Mindset do coração', 'Autoajuda', true, null);
+insert into livro (isbn, titulo, tema, ja_leu, emprestado_para_id) values ('13', 'A coragem de ser imperfeito', 'Autoajuda', true, null);
+insert into livro (isbn, titulo, tema, ja_leu, emprestado_para_id) values ('14', 'O milagre do amanhã', 'Autoajuda', true, null);
+insert into livro (isbn, titulo, tema, ja_leu, emprestado_para_id) values ('15', 'Box Harry Potter', 'Infantojuvenil', true, 2);
+insert into livro (isbn, titulo, tema, ja_leu, emprestado_para_id) values ('16', 'Corte de espinhos e rosas', 'Infantojuvenil', true, null);
+insert into livro (isbn, titulo, tema, ja_leu, emprestado_para_id) values ('17', 'Coleção especial Anne de Green Gables', 'Infantojuvenil', true, null);
+insert into livro (isbn, titulo, tema, ja_leu, emprestado_para_id) values ('18', 'Box - Percy Jackon e os olimpianos', 'Infantojuvenil', true, null);
+insert into livro (isbn, titulo, tema, ja_leu, emprestado_para_id) values ('19', 'O príncipe cruel', 'Infantojuvenil', true, null);
+insert into livro (isbn, titulo, tema, ja_leu, emprestado_para_id) values ('20', 'Gestão profissional na prática', 'Negócios', true, 1);
+insert into livro (isbn, titulo, tema, ja_leu, emprestado_para_id) values ('21', 'Do mil ao milhão', 'Negócios', true, null);
+insert into livro (isbn, titulo, tema, ja_leu, emprestado_para_id) values ('22', 'Pai rico, pai pobre', 'Negócios', true, null);
+insert into livro (isbn, titulo, tema, ja_leu, emprestado_para_id) values ('23', 'O homem mais rico da Babilônia', 'Negócios', true, null);
+insert into livro (isbn, titulo, tema, ja_leu, emprestado_para_id) values ('24', 'Os segredos da mente milionária', 'Negócios', true, null);

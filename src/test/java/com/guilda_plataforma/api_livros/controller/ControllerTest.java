@@ -20,7 +20,7 @@ public class ControllerTest {
     private MockMvc mvc;
 
     @Test
-    public void quando_chama_pagina_inicial_retorna_http_status_200() throws Exception {
+    public void quando_chama_rota_index_retorna_http_status_200() throws Exception {
         ResultActions perform = mvc.perform(
                 MockMvcRequestBuilders
                         .get("/")
@@ -29,12 +29,85 @@ public class ControllerTest {
     }
 
     @Test
-    public void quando_chama_pagina_inicial_retorna_mensagem() throws Exception {
+    public void quando_chama_rota_index_retorna_mensagem() throws Exception {
         ResultActions perform = mvc.perform(
                 MockMvcRequestBuilders
                         .get("/")
                         .accept(MediaType.APPLICATION_JSON))
                 .andExpect(content().string(equalTo("API Livros - Guilda Plataforma")));
+    }
+
+    @Test
+    public void quando_chama_rota_listar_retorna_http_status_200() throws Exception {
+        ResultActions perform = mvc.perform(
+                MockMvcRequestBuilders
+                        .get("/listar")
+                        .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk());
+    }
+
+    @Test
+    public void quando_chama_rota_listar_retorna_mensagem() throws Exception {
+        ResultActions perform = mvc.perform(
+                MockMvcRequestBuilders
+                        .get("/listar")
+                        .accept(MediaType.APPLICATION_JSON))
+                .andExpect(content().string(equalTo("API Livros - Listando todos os livros")));
+    }
+
+    @Test
+    public void quando_chama_rota_listar_tema_retorna_http_status_200() throws Exception {
+        ResultActions perform = mvc.perform(
+                MockMvcRequestBuilders
+                        .get("/listar/tema/teste")
+                        .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk());
+    }
+
+    @Test
+    public void quando_chama_rota_listar_tema_retorna_mensagem() throws Exception {
+        ResultActions perform = mvc.perform(
+                MockMvcRequestBuilders
+                        .get("/listar/tema/teste")
+                        .accept(MediaType.APPLICATION_JSON))
+                .andExpect(content().string(equalTo("API Livros - Listando livros por tema: teste")));
+    }
+
+    @Test
+    public void quando_chama_rota_listar_emprestado_retorna_http_status_200() throws Exception {
+        ResultActions perform = mvc.perform(
+                MockMvcRequestBuilders
+                        .get("/listar/emprestado")
+                        .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk());
+    }
+
+    @Test
+    public void quando_chama_rota_listar_emprestado_retorna_mensagem() throws Exception {
+        ResultActions perform = mvc.perform(
+                MockMvcRequestBuilders
+                        .get("/listar/emprestado")
+                        .accept(MediaType.APPLICATION_JSON))
+                .andExpect(content().string(equalTo("API Livros - Listando livros emprestados")));
+    }
+
+    @Test
+    public void quando_chama_rota_listar_nao_emprestado_retorna_http_status_200() throws Exception {
+        ResultActions perform = mvc.perform(
+                MockMvcRequestBuilders
+                        .get("/listar/nao-emprestado")
+                        .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk());
+    }
+
+    @Test
+    public void quando_chama_rota_listar_nao_emprestado_retorna_mensagem() throws Exception {
+        ResultActions perform = mvc.perform(
+                MockMvcRequestBuilders
+                        .get("/listar/nao-emprestado")
+                        .accept(MediaType.APPLICATION_JSON)
+                        .characterEncoding("UTF-8"))
+                .andExpect(content().string(equalTo("API Livros - Listando livros da estante")));
     }
 
 }
